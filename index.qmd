@@ -2,15 +2,18 @@
 about:
   id: about
   template: jolla
-  image: profile.jpg
+  image: CoxKatherine_profile.jpeg
   image-width: 75%
   links:
-    - icon: twitter
-      text: twitter
-      href: https://twitter.com
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/KatherineCox
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/Katherine_E_Cox
+    - icon: file-person
+      text: CV
+#      href: 
 listing:
   id: posts
   contents: posts
@@ -26,14 +29,18 @@ page-layout: custom
 
 ::: {.g-col-12 .g-col-md-4}
 ::: {#about}
-Here is some content.
+## Katherine Cox, PhD
+
+Educator, biologist
+
+Passionate about using technology to enhance education and expand access
 :::
 :::
 
 ::: {#posts .g-col-12 .g-col-md-8 .g-col-xl-6 .mx-0}
 :::
 
-::: {#quarto-margin-sidebar .mx-xl-3}
+::: {#quarto-margin-sidebar .mx-xl-3 style="display: block;"}
 :::
 
 :::
