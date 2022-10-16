@@ -1,14 +1,39 @@
 ---
-title: "katherinecox.github.io"
+about:
+  id: about
+  template: jolla
+  image: profile.jpg
+  image-width: 75%
+  links:
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com
+    - icon: github
+      text: Github
+      href: https://github.com
 listing:
+  id: posts
   contents: posts
   sort: "date desc"
   type: default
   categories: true
   sort-ui: false
   filter-ui: false
-page-layout: full
-title-block-banner: true
+page-layout: custom
 ---
 
+::: {.grid style="column-gap: 0; padding: 2em;"}
 
+::: {.g-col-12 .g-col-md-4}
+::: {#about}
+Here is some content.
+:::
+:::
+
+::: {#posts .g-col-12 .g-col-md-8 .g-col-xl-6 .mx-0}
+:::
+
+::: {#quarto-margin-sidebar .mx-xl-3}
+:::
+
+:::
