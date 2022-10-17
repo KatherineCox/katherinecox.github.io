@@ -15,11 +15,11 @@ about:
       text: CV
 #      href: 
 listing:
-  id: posts
-  contents: posts
+  id: on-my-mind
+  contents: on-my-mind/*/
   sort: "date desc"
   type: default
-  categories: true
+  categories: numbered
   sort-ui: false
   filter-ui: false
 page-layout: custom
@@ -31,16 +31,21 @@ page-layout: custom
 ::: {#about}
 ## Katherine Cox, PhD
 
-Educator, biologist
+Educator, biologist, armchair programmer
 
-Passionate about using technology to enhance education and expand access
+Passionate about using technology to enhance learning and expand access to education.
 :::
 :::
 
-::: {#posts .g-col-12 .g-col-md-8 .g-col-xl-6 .mx-0}
+::: {.g-col-12 .g-col-md-8 .g-col-xl-6}
+## On My Mind
+
+::: {#on-my-mind .mx-0}
 :::
 
-::: {#quarto-margin-sidebar .mx-xl-3 style="display: block;"}
+:::
+
+::: {#quarto-margin-sidebar .g-col-12 .g-col-xl-2 .mx-xl-3 style="display: block;"}
 :::
 
 :::

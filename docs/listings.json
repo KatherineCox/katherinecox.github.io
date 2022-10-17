@@ -2,8 +2,13 @@
   {
     "listing": "/index.html",
     "items": [
-      "/posts/post-with-code/index.html",
-      "/posts/welcome/index.html"
+      "/on-my-mind/hello-quarto/index.html"
+    ]
+  },
+  {
+    "listing": "/on-my-mind/index.html",
+    "items": [
+      "/on-my-mind/hello-quarto/index.html"
     ]
   }
 ]

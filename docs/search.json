@@ -18,7 +18,14 @@
     "href": "index.html#katherine-cox-phd",
     "title": "Katherine Cox",
     "section": "Katherine Cox, PhD",
-    "text": "Katherine Cox, PhD\nEducator, biologist\nPassionate about using technology to enhance education and expand access"
+    "text": "Katherine Cox, PhD\nEducator, biologist, armchair programmer\nPassionate about using technology to enhance learning and expand access to education."
+  },
+  {
+    "objectID": "index.html#on-my-mind",
+    "href": "index.html#on-my-mind",
+    "title": "Katherine Cox",
+    "section": "On My Mind",
+    "text": "On My Mind\n\n\n\n\n\n\nHello, Quarto\n\n\n\n\n\n\n\nquarto\n\n\nweb development\n\n\n\n\nSetting up a Quarto website.\n\n\n\n\n\n\nOct 15, 2022\n\n\nKatherine Cox\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -26,5 +33,33 @@
     "title": "About",
     "section": "",
     "text": "About this blog"
+  },
+  {
+    "objectID": "on-my-mind/hello-quarto/index.html",
+    "href": "on-my-mind/hello-quarto/index.html",
+    "title": "Hello, Quarto",
+    "section": "",
+    "text": "Hello world!\nMaking a professional website has been on my todo list for a long time, and with the recent release of Quarto, I decided this would be a great way to kick Quarto’s tires. And what better way to start than documenting my set up process?\nThis first post is not too exciting; just some basic setup. There are many ways to set up a Quarto website and they’re well documented at quarto.org.\nThe next few posts will dig into the nitty gritty details of customizing my site, which is a bit more of an adventure."
+  },
+  {
+    "objectID": "on-my-mind/hello-quarto/index.html#set-up-quarto-project",
+    "href": "on-my-mind/hello-quarto/index.html#set-up-quarto-project",
+    "title": "Hello, Quarto",
+    "section": "Set Up Quarto Project",
+    "text": "Set Up Quarto Project\n\nThis assumes:\n\nYou’re using RStudio\nYou’ve already set up git and GitHub to play nicely with R/RStudio, and are familiar with the basics (committing and pushing)\n\nIf you need help with this, Happy Git with R by Jenny Bryan and Jim Hester is an excellent resource\n\nYou’ve installed usethis (not essential, just convenient)\n\n\n\nTo set up your Quarto project:\n\nCreate a new quarto blog using RStudio\n\nFile > New Project > New Directory > Quarto blog\n\nusethis::use_git()\n\nRestart RStudio\n\nAdd /.quarto/ to .gitignore (and commit)\nUpdate quarto.yml (and commit)\n\nSet output directory\nproject:\n  type: website\n  output-dir: docs\nSet website title (for the site metadata)\n\nNote: this will not update the Title displayed on your homepage - that is set in index.qmd.\n\nUpdate social media icons\n\nPreview site by clicking Render"
+  },
+  {
+    "objectID": "on-my-mind/hello-quarto/index.html#set-up-github-pages",
+    "href": "on-my-mind/hello-quarto/index.html#set-up-github-pages",
+    "title": "Hello, Quarto",
+    "section": "Set Up GitHub Pages",
+    "text": "Set Up GitHub Pages\nThis set up has you rendering locally (into /docs) and then pushing to GitHub and telling GitHub pages where to find your rendered site. I chose this method because it’s simple and it allows me to preview my changes before pushing them to the live site.\n\nIn RStudio:\n\nRender your site (even if you have already previewed, do a complete render now)\n\nRStudio top right pane > Build > Render Website\n\nEnsure that the /docs folder is being tracked by git\nAdd an (empty) .nojekyll file to the root directory (and commit)\n\nHeads up: this file may not be displayed in the RStudio Files tab (or in your computer’s file browser), unless you’ve enabled display of hidden files. By default, RStudio only displays a few specific hidden files (e.g. .gitignore).\n\nusethis::use_github()\n\n\n\nOn GitHub:\n\nSet GitHub Pages to use /docs\n\nSettings > Pages > Build and deployment\n\nSource: Deploy from a branch\nBranch: Main > /docs (and click Save)\n\n\nWait a little bit for the site to update (you can see progress under the Actions tab)\nCheck out your new website! (You can find the url under Settings > Pages)"
+  },
+  {
+    "objectID": "on-my-mind/index.html",
+    "href": "on-my-mind/index.html",
+    "title": "On My Mind",
+    "section": "",
+    "text": "quarto\n\n\nweb development\n\n\n\n\nSetting up a Quarto website.\n\n\n\n\n\n\nOct 15, 2022\n\n\nKatherine Cox\n\n\n\n\n\n\nNo matching items"
   }
 ]

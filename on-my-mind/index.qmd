@@ -1,0 +1,15 @@
+---
+title: On My Mind
+subtitle: "Projects I'm working on, books I'm reading, problems I'm solving"
+listing:
+  id: on-my-mind
+  sort: "date desc"
+  type: default
+  categories: unnumbered
+  sort-ui: false
+  filter-ui: true
+page-layout: full
+---
+
+::: {#on-my-mind}
+:::

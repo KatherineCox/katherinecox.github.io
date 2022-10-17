@@ -7,12 +7,14 @@ website:
   navbar:
     right:
       - about.qmd
+      - text: On My Mind
+        href: on-my-mind/
       - icon: github
         href: https://github.com/KatherineCox
 
 format:
   html:
-    theme: cosmo
+    theme: yeti
     css: styles.css
 
 

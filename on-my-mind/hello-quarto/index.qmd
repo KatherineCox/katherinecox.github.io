@@ -1,0 +1,69 @@
+---
+title: "Hello, Quarto"
+author: "Katherine Cox"
+date: "2022-10-15"
+description: Setting up a Quarto website.
+categories: [quarto, web development]
+---
+
+## Welcome
+
+Hello world!
+
+Making a professional website has been on my todo list for a long time, and with the recent release of [Quarto](https://quarto.org), I decided this would be a great way to kick Quarto's tires.  And what better way to start than documenting my set up process?
+
+This first post is not too exciting; just some basic setup.  There are many ways to set up a Quarto website and they're well documented at [quarto.org](https://quarto.org).
+
+The next few posts will dig into the nitty gritty details of customizing my site, which is a bit more of an adventure.
+
+## Set Up Quarto Project
+
+### This assumes:
+
+- You're using RStudio
+- You've already set up git and GitHub to play nicely with R/RStudio, and are familiar with the basics (committing and pushing)
+    - If you need help with this, [Happy Git with R](https://happygitwithr.com) by Jenny Bryan and Jim Hester is an excellent resource
+- You've installed `usethis`  (not essential, just convenient)
+
+### To set up your Quarto project:
+
+1. Create a new quarto blog using RStudio
+    a. `File` > `New Project` > `New Directory` > `Quarto blog`
+1. `usethis::use_git()`
+    a. Restart RStudio
+1. Add `/.quarto/` to `.gitignore` (and commit)
+1. Update `quarto.yml` (and commit)
+    a. Set output directory
+    
+        ```
+        project:
+          type: website
+          output-dir: docs
+        ```
+        
+    a. Set website `title` (for the site metadata)
+        i.  Note: this will not update the Title displayed on your homepage - that is set in `index.qmd`.
+    a. Update social media icons
+1. Preview site by clicking `Render`
+
+## Set Up GitHub Pages
+
+This set up has you rendering locally (into `/docs`) and then pushing to GitHub and telling GitHub pages where to find your rendered site.  I chose this method because it's simple and it allows me to preview my changes before pushing them to the live site.
+
+### In RStudio:
+
+1. Render your site (even if you have already previewed, do a complete render now)
+    a. RStudio top right pane > `Build` > `Render Website`
+1. Ensure that the `/docs` folder is being tracked by git
+1. Add an (empty) `.nojekyll` file to the root directory (and commit)
+    a. Heads up: this file may not be displayed in the RStudio Files tab (or in your computer's file browser), unless you've enabled display of hidden files.  By default, RStudio only displays a few specific hidden files (e.g. `.gitignore`).
+1. `usethis::use_github()`
+
+### On GitHub:
+
+1. Set GitHub Pages to use `/docs`
+    a. `Settings` > `Pages` > `Build and deployment`
+        i. Source: `Deploy from a branch`
+        i. Branch: `Main` > `/docs` (and click Save)
+1. Wait a little bit for the site to update (you can see progress under the `Actions` tab)
+1. Check out your new website!  (You can find the url under `Settings` > `Pages`)
