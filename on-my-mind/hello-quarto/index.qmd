@@ -3,7 +3,7 @@ title: "Hello, Quarto"
 author: "Katherine Cox"
 date: "2022-10-15"
 description: Setting up a Quarto website.
-categories: [quarto, web development]
+categories: [quarto]
 ---
 
 ## Welcome
@@ -12,7 +12,7 @@ Hello world!
 
 Making a professional website has been on my todo list for a long time, and with the recent release of [Quarto](https://quarto.org), I decided this would be a great way to kick Quarto's tires.  And what better way to start than documenting my set up process?
 
-This first post is not too exciting; just some basic setup.  There are many ways to set up a Quarto website and they're well documented at [quarto.org](https://quarto.org).
+This first post is not too exciting; just some basic setup.  There are many ways to set up a Quarto website and they're well documented at [quarto.org](https://quarto.org).  I'm therefore not explaining things in detail for this post, just recording the steps I took.
 
 The next few posts will dig into the nitty gritty details of customizing my site, which is a bit more of an adventure.
 
@@ -32,7 +32,7 @@ The next few posts will dig into the nitty gritty details of customizing my site
 1. `usethis::use_git()`
     a. Restart RStudio
 1. Add `/.quarto/` to `.gitignore` (and commit)
-1. Update `quarto.yml` (and commit)
+1. Update `_quarto.yml` (and commit)
     a. Set output directory
     
         ```
@@ -64,6 +64,6 @@ This set up has you rendering locally (into `/docs`) and then pushing to GitHub 
 1. Set GitHub Pages to use `/docs`
     a. `Settings` > `Pages` > `Build and deployment`
         i. Source: `Deploy from a branch`
-        i. Branch: `Main` > `/docs` (and click Save)
+        i. Branch: `Main` > `/docs` (and click `Save`)
 1. Wait a little bit for the site to update (you can see progress under the `Actions` tab)
 1. Check out your new website!  (You can find the url under `Settings` > `Pages`)

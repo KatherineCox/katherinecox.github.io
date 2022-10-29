@@ -33,7 +33,7 @@ page-layout: custom
 
 Educator, biologist, armchair programmer
 
-Passionate about using technology to enhance learning and expand access to education.
+Passionate about using technology to enhance learning and expand access to education
 :::
 :::
 

@@ -2,12 +2,14 @@
   {
     "listing": "/index.html",
     "items": [
+      "/on-my-mind/quarto-page-content/index.html",
       "/on-my-mind/hello-quarto/index.html"
     ]
   },
   {
     "listing": "/on-my-mind/index.html",
     "items": [
+      "/on-my-mind/quarto-page-content/index.html",
       "/on-my-mind/hello-quarto/index.html"
     ]
   }

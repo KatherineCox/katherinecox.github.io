@@ -1,0 +1,89 @@
+---
+title: "Quarto: Customize Home Page Content"
+author: "Katherine Cox"
+date: "2022-10-22"
+description: Using Quarto's built-in page sections
+categories: [quarto]
+draft: true
+---
+
+:::{#last-updated}
+date
+quarto version
+:::
+
+In this post, we'll cover how to customize *what* shows up on your home page (or any page, for that matter).  In later posts, we'll discuss how to arrange your content on the page.  For now, you'll learn:
+
+- Where to edit the content of your home page
+- How to add Quarto's special built-in sections (About, Listing)
+
+## What's on your homepage?
+
+Now it's time to meet your new best friend, `index.qmd`
+
+Behind every page on your Quarto site is a file named `index.qmd` ^[This is not quite true - there can be some exceptions.  But it is true for most pages, and is a useful baseline].  The `index.qmd` file controls the page's content, as well as any settings that are specific to that page.
+
+The file we're looking for today is the `index.qmd` located in the root directory of your Quarto website, which is the source for your home page.
+
+:::{.callout-tip}
+If you want to take a peek at some other `index.qmd` files, you can find them under the `/posts` directory (assuming you set up your Quarto site as a "blog"). `/posts` contains a directory for each of your posts.  Inside each of those is an `index.qmd` file that contains the contents for that post.
+:::
+
+The organization of your Quarto repository is reflected in the organization of your site.
+
+- The `index.qmd` located in the root directory becomes your homepage (e.g. `myblog.io`)
+- An `index.qmd` located in `/posts/my-aweseome-post` will become the page located at `myblog.io/posts/my-awesome-post`
+
+For now, we'll talk about the home page, but you could add content in exactly the same way to any other page.  There's nothing "special" about the home page.
+
+## What's in an `index.qmd`?
+
+An `index.qmd` file is a standard `qmd` file, containing a YAML header followed by markdown content.  A couple of things to note:
+
+1. Quarto provides many YAML options for customizing the output for an HTML page.  An `index.qmd` file should contain any options that are *specific to that page*.  Site-wide options, (e.g. css) can instead be set in `_quarto.yml`.
+1. `index.qmd` files can be a little unusual in that they don't necessarily need to contain much (or any) content.  Instead, for some pages, you use YAML settings to tell Quarto how to automatically populate the page.  This is particularly useful for "listing" content - Quarto can generate e.g. a nice-looking list of all your blog posts, or a card for each of your projects.
+
+## Add markdown content
+
+The simplest way to add content to your homepage is to write Quarto-flavored markdown in the body of the `index.Rmd`.  Any markdown you write in this file will be rendered on your home page.
+
+(screenshot)
+
+## Add an `About` section
+
+Quarto provides a couple of "page" types, which you can drop into your website by configuring some YAML settings.  
+
+While Quarto refers to these as "pages" (and they can be used to create a standalone page), you can also add them as subsections of another page.
+
+The first of these we'll cover is the `About` page.
+
+### What's an "About" Page?
+
+An "About" page provides a way to display profile information about yourself, including a picture and social media links.  You can also use markdown to include information introducing yourself.
+
+Quarto makes it easy to create a nice-looking "About" page by configuring just a few YAML options.  The main options you need to set are:
+
+    - `template`: how the page is layed out.  Quarto provides several `template` options to choose from, and you can see a preview of your options in the [Quarto Docs](https://quarto.org/docs/websites/website-about.html#templates).
+    - image
+    - links
+  There are a couple of additional options for customizing the image, which you can read about in the [Docs](https://quarto.org/docs/websites/website-about.html#image).
+
+If you started out your Quarto site as a "blog", then you will have an About page already set up for you, in a file named `about.qmd`.
+
+### Add an "About" section to your home page.
+
+If you just add the `about` page settings to the YAML of your home page, your home page will turn into an "About" page.  Any markdown content will get added inside the "About" template.  If you're happy with that, then you're good to go!
+
+If, instead, you'd like to insert an "About" template as a subsection of your homepage, then you need to do two things:
+
+1. In the YAML, add an id to the `about` section.
+    - You can use almost any `id` you'd like ^[The only requirements for an HTML id are that it must 1) be unique, 2) not contain whitespace, and 3) contain at least one character.  I am uncertain whether there are any additional requirements imposed by Quarto or Pandoc], as long as its unique in the page.
+    - A common convention is to use `words-separated-by-hyphens`.
+
+    (screenshot)
+    
+1. In the markdown body, add a `div` block with the matching `id`, to indicate where the "About" template should be inserted.
+    - `div` blocks are somewhat similar to code blocks - you begin a `div` block with 3 (or more) colons, followed by the `id` in curly braces (`{#my-awesome-div}`), and you end the `div` block with another 3 (or more) colons
+    screenshot
+
+## Add a `Listing` section

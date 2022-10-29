@@ -105,7 +105,6 @@ ul.task-list{list-style: none;}
 <h1 class="title">Hello, Quarto</h1>
   <div class="quarto-categories">
     <div class="quarto-category">quarto</div>
-    <div class="quarto-category">web development</div>
   </div>
   </div>
 
@@ -141,7 +140,7 @@ ul.task-list{list-style: none;}
 <h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
 <p>Hello world!</p>
 <p>Making a professional website has been on my todo list for a long time, and with the recent release of <a href="https://quarto.org">Quarto</a>, I decided this would be a great way to kick Quarto’s tires. And what better way to start than documenting my set up process?</p>
-<p>This first post is not too exciting; just some basic setup. There are many ways to set up a Quarto website and they’re well documented at <a href="https://quarto.org">quarto.org</a>.</p>
+<p>This first post is not too exciting; just some basic setup. There are many ways to set up a Quarto website and they’re well documented at <a href="https://quarto.org">quarto.org</a>. I’m therefore not explaining things in detail for this post, just recording the steps I took.</p>
 <p>The next few posts will dig into the nitty gritty details of customizing my site, which is a bit more of an adventure.</p>
 </section>
 <section id="set-up-quarto-project" class="level2">
@@ -169,7 +168,7 @@ ul.task-list{list-style: none;}
 <li>Restart RStudio</li>
 </ol></li>
 <li>Add <code>/.quarto/</code> to <code>.gitignore</code> (and commit)</li>
-<li>Update <code>quarto.yml</code> (and commit)
+<li>Update <code>_quarto.yml</code> (and commit)
 <ol type="a">
 <li><p>Set output directory</p>
 <pre><code>project:
@@ -211,7 +210,7 @@ ul.task-list{list-style: none;}
 <li><code>Settings</code> &gt; <code>Pages</code> &gt; <code>Build and deployment</code>
 <ol type="i">
 <li>Source: <code>Deploy from a branch</code></li>
-<li>Branch: <code>Main</code> &gt; <code>/docs</code> (and click Save)</li>
+<li>Branch: <code>Main</code> &gt; <code>/docs</code> (and click <code>Save</code>)</li>
 </ol></li>
 </ol></li>
 <li>Wait a little bit for the site to update (you can see progress under the <code>Actions</code> tab)</li>
